@@ -15,12 +15,33 @@ buildscript {
     }
 }
 repositories {
+    flatDir {
+        dirs 'libs'
+    }
     mavenLocal()
     mavenCentral()
 }
 
+ext {
+    SPRING_VERSION = "4.3.0.RELEASE"
+    SLF4J_VERSION = "1.7.7"
+}
+
 dependencies {
     compile group: 'org.scream3r', name: 'jssc', version: '2.8.0'
+    compile group: 'org.apache.commons', name: 'commons-exec', version: '1.1'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+//    compile group: 'com.github.bartlomiej-gora', name: 'RPNLibrary', version: '3.2.2'
+    compile group: 'org.springframework', name: 'spring-core', version: "$SPRING_VERSION"
+    compile group: 'org.springframework', name: 'spring-context', version: "$SPRING_VERSION"
+
+    compile "org.slf4j:jcl-over-slf4j:$SLF4J_VERSION"
+    compile "org.slf4j:log4j-over-slf4j:$SLF4J_VERSION"
+
+
+    testCompile "junit:junit:4.12"
+    testCompile "org.mockito:mockito-core:2.8.9"
+
 }
 
 apply plugin: 'javafx-gradle-plugin'

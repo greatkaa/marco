@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<VBox prefHeight="400.0" prefWidth="640.0" stylesheets="/sample.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="online.greatlab.Controller">
+<VBox prefHeight="400.0" prefWidth="640.0" stylesheets="/css/sample.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="online.greatlab.controller.PageController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
